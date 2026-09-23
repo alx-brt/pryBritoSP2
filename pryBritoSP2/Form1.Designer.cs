@@ -29,24 +29,25 @@
         private void InitializeComponent()
         {
             gbTitularDeReserva = new GroupBox();
-            cbAdicionales = new GroupBox();
-            gbTipoDeCabania = new GroupBox();
-            gbFormasDePago = new GroupBox();
-            lblTipo = new Label();
-            txtTipo = new ComboBox();
-            lblPersonas = new Label();
-            cbPersonas = new ComboBox();
-            txtDias = new TextBox();
-            lblDias = new Label();
-            Cocina = new CheckedListBox();
-            rbEfectivo = new RadioButton();
-            rbTarjeta = new RadioButton();
-            lblTarjetas = new Label();
-            cbTarjetas = new ComboBox();
-            lblNombre = new Label();
-            lblTelefono = new Label();
-            textBox2 = new TextBox();
             textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            lblTelefono = new Label();
+            lblNombre = new Label();
+            cbAdicionales = new GroupBox();
+            Cocina = new CheckedListBox();
+            gbTipoDeCabania = new GroupBox();
+            lblDias = new Label();
+            txtDias = new TextBox();
+            cbPersonas = new ComboBox();
+            lblPersonas = new Label();
+            txtTipo = new ComboBox();
+            lblTipo = new Label();
+            gbFormasDePago = new GroupBox();
+            cbTarjetas = new ComboBox();
+            lblTarjetas = new Label();
+            rbTarjeta = new RadioButton();
+            rbEfectivo = new RadioButton();
+            button1 = new Button();
             gbTitularDeReserva.SuspendLayout();
             cbAdicionales.SuspendLayout();
             gbTipoDeCabania.SuspendLayout();
@@ -59,22 +60,63 @@
             gbTitularDeReserva.Controls.Add(textBox2);
             gbTitularDeReserva.Controls.Add(lblTelefono);
             gbTitularDeReserva.Controls.Add(lblNombre);
-            gbTitularDeReserva.Location = new Point(12, 237);
+            gbTitularDeReserva.Location = new Point(12, 221);
             gbTitularDeReserva.Name = "gbTitularDeReserva";
             gbTitularDeReserva.Size = new Size(509, 106);
             gbTitularDeReserva.TabIndex = 10;
             gbTitularDeReserva.TabStop = false;
             gbTitularDeReserva.Text = "Titular de la reserva";
             // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(80, 64);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(413, 23);
+            textBox3.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(80, 30);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(413, 23);
+            textBox2.TabIndex = 2;
+            // 
+            // lblTelefono
+            // 
+            lblTelefono.AutoSize = true;
+            lblTelefono.Location = new Point(20, 64);
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new Size(58, 15);
+            lblTelefono.TabIndex = 1;
+            lblTelefono.Text = "Teléfonos";
+            lblTelefono.Click += label6_Click;
+            // 
+            // lblNombre
+            // 
+            lblNombre.AutoSize = true;
+            lblNombre.Location = new Point(20, 33);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(51, 15);
+            lblNombre.TabIndex = 0;
+            lblNombre.Text = "Nombre";
+            // 
             // cbAdicionales
             // 
             cbAdicionales.Controls.Add(Cocina);
-            cbAdicionales.Location = new Point(12, 115);
+            cbAdicionales.Location = new Point(12, 99);
             cbAdicionales.Name = "cbAdicionales";
             cbAdicionales.Size = new Size(196, 116);
             cbAdicionales.TabIndex = 11;
             cbAdicionales.TabStop = false;
             cbAdicionales.Text = "groupBox2";
+            // 
+            // Cocina
+            // 
+            Cocina.FormattingEnabled = true;
+            Cocina.Location = new Point(20, 22);
+            Cocina.Name = "Cocina";
+            Cocina.Size = new Size(155, 76);
+            Cocina.TabIndex = 0;
             // 
             // gbTipoDeCabania
             // 
@@ -84,67 +126,12 @@
             gbTipoDeCabania.Controls.Add(lblPersonas);
             gbTipoDeCabania.Controls.Add(txtTipo);
             gbTipoDeCabania.Controls.Add(lblTipo);
-            gbTipoDeCabania.Location = new Point(12, 28);
+            gbTipoDeCabania.Location = new Point(12, 12);
             gbTipoDeCabania.Name = "gbTipoDeCabania";
             gbTipoDeCabania.Size = new Size(509, 69);
             gbTipoDeCabania.TabIndex = 12;
             gbTipoDeCabania.TabStop = false;
             gbTipoDeCabania.Text = "Tipo de cabaña";
-            // 
-            // gbFormasDePago
-            // 
-            gbFormasDePago.Controls.Add(cbTarjetas);
-            gbFormasDePago.Controls.Add(lblTarjetas);
-            gbFormasDePago.Controls.Add(rbTarjeta);
-            gbFormasDePago.Controls.Add(rbEfectivo);
-            gbFormasDePago.Location = new Point(214, 115);
-            gbFormasDePago.Name = "gbFormasDePago";
-            gbFormasDePago.Size = new Size(307, 116);
-            gbFormasDePago.TabIndex = 13;
-            gbFormasDePago.TabStop = false;
-            gbFormasDePago.Text = "Formas de pago";
-            // 
-            // lblTipo
-            // 
-            lblTipo.AutoSize = true;
-            lblTipo.Location = new Point(20, 27);
-            lblTipo.Name = "lblTipo";
-            lblTipo.Size = new Size(31, 15);
-            lblTipo.TabIndex = 0;
-            lblTipo.Text = "Tipo";
-            // 
-            // txtTipo
-            // 
-            txtTipo.FormattingEnabled = true;
-            txtTipo.Location = new Point(57, 27);
-            txtTipo.Name = "txtTipo";
-            txtTipo.Size = new Size(143, 23);
-            txtTipo.TabIndex = 1;
-            // 
-            // lblPersonas
-            // 
-            lblPersonas.AutoSize = true;
-            lblPersonas.Location = new Point(221, 27);
-            lblPersonas.Name = "lblPersonas";
-            lblPersonas.Size = new Size(54, 15);
-            lblPersonas.TabIndex = 2;
-            lblPersonas.Text = "Personas";
-            // 
-            // cbPersonas
-            // 
-            cbPersonas.FormattingEnabled = true;
-            cbPersonas.Location = new Point(277, 27);
-            cbPersonas.Name = "cbPersonas";
-            cbPersonas.Size = new Size(77, 23);
-            cbPersonas.TabIndex = 3;
-            cbPersonas.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
-            // 
-            // txtDias
-            // 
-            txtDias.Location = new Point(405, 27);
-            txtDias.Name = "txtDias";
-            txtDias.Size = new Size(79, 23);
-            txtDias.TabIndex = 4;
             // 
             // lblDias
             // 
@@ -155,24 +142,77 @@
             lblDias.TabIndex = 5;
             lblDias.Text = "Días";
             // 
-            // Cocina
+            // txtDias
             // 
-            Cocina.FormattingEnabled = true;
-            Cocina.Location = new Point(20, 22);
-            Cocina.Name = "Cocina";
-            Cocina.Size = new Size(155, 76);
-            Cocina.TabIndex = 0;
+            txtDias.Location = new Point(405, 27);
+            txtDias.Name = "txtDias";
+            txtDias.Size = new Size(79, 23);
+            txtDias.TabIndex = 4;
             // 
-            // rbEfectivo
+            // cbPersonas
             // 
-            rbEfectivo.AutoSize = true;
-            rbEfectivo.Location = new Point(19, 22);
-            rbEfectivo.Name = "rbEfectivo";
-            rbEfectivo.Size = new Size(67, 19);
-            rbEfectivo.TabIndex = 0;
-            rbEfectivo.TabStop = true;
-            rbEfectivo.Text = "Efectivo";
-            rbEfectivo.UseVisualStyleBackColor = true;
+            cbPersonas.FormattingEnabled = true;
+            cbPersonas.Location = new Point(277, 27);
+            cbPersonas.Name = "cbPersonas";
+            cbPersonas.Size = new Size(77, 23);
+            cbPersonas.TabIndex = 3;
+            cbPersonas.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // lblPersonas
+            // 
+            lblPersonas.AutoSize = true;
+            lblPersonas.Location = new Point(221, 27);
+            lblPersonas.Name = "lblPersonas";
+            lblPersonas.Size = new Size(54, 15);
+            lblPersonas.TabIndex = 2;
+            lblPersonas.Text = "Personas";
+            // 
+            // txtTipo
+            // 
+            txtTipo.FormattingEnabled = true;
+            txtTipo.Location = new Point(57, 27);
+            txtTipo.Name = "txtTipo";
+            txtTipo.Size = new Size(143, 23);
+            txtTipo.TabIndex = 1;
+            // 
+            // lblTipo
+            // 
+            lblTipo.AutoSize = true;
+            lblTipo.Location = new Point(20, 27);
+            lblTipo.Name = "lblTipo";
+            lblTipo.Size = new Size(31, 15);
+            lblTipo.TabIndex = 0;
+            lblTipo.Text = "Tipo";
+            // 
+            // gbFormasDePago
+            // 
+            gbFormasDePago.Controls.Add(cbTarjetas);
+            gbFormasDePago.Controls.Add(lblTarjetas);
+            gbFormasDePago.Controls.Add(rbTarjeta);
+            gbFormasDePago.Controls.Add(rbEfectivo);
+            gbFormasDePago.Location = new Point(214, 99);
+            gbFormasDePago.Name = "gbFormasDePago";
+            gbFormasDePago.Size = new Size(307, 116);
+            gbFormasDePago.TabIndex = 13;
+            gbFormasDePago.TabStop = false;
+            gbFormasDePago.Text = "Formas de pago";
+            // 
+            // cbTarjetas
+            // 
+            cbTarjetas.FormattingEnabled = true;
+            cbTarjetas.Location = new Point(147, 69);
+            cbTarjetas.Name = "cbTarjetas";
+            cbTarjetas.Size = new Size(121, 23);
+            cbTarjetas.TabIndex = 3;
+            // 
+            // lblTarjetas
+            // 
+            lblTarjetas.AutoSize = true;
+            lblTarjetas.Location = new Point(147, 51);
+            lblTarjetas.Name = "lblTarjetas";
+            lblTarjetas.Size = new Size(47, 15);
+            lblTarjetas.TabIndex = 2;
+            lblTarjetas.Text = "Tarjetas";
             // 
             // rbTarjeta
             // 
@@ -185,61 +225,32 @@
             rbTarjeta.Text = "Tarjeta";
             rbTarjeta.UseVisualStyleBackColor = true;
             // 
-            // lblTarjetas
+            // rbEfectivo
             // 
-            lblTarjetas.AutoSize = true;
-            lblTarjetas.Location = new Point(147, 51);
-            lblTarjetas.Name = "lblTarjetas";
-            lblTarjetas.Size = new Size(47, 15);
-            lblTarjetas.TabIndex = 2;
-            lblTarjetas.Text = "Tarjetas";
+            rbEfectivo.AutoSize = true;
+            rbEfectivo.Location = new Point(19, 22);
+            rbEfectivo.Name = "rbEfectivo";
+            rbEfectivo.Size = new Size(67, 19);
+            rbEfectivo.TabIndex = 0;
+            rbEfectivo.TabStop = true;
+            rbEfectivo.Text = "Efectivo";
+            rbEfectivo.UseVisualStyleBackColor = true;
             // 
-            // cbTarjetas
+            // button1
             // 
-            cbTarjetas.FormattingEnabled = true;
-            cbTarjetas.Location = new Point(147, 69);
-            cbTarjetas.Name = "cbTarjetas";
-            cbTarjetas.Size = new Size(121, 23);
-            cbTarjetas.TabIndex = 3;
-            // 
-            // lblNombre
-            // 
-            lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(20, 33);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(51, 15);
-            lblNombre.TabIndex = 0;
-            lblNombre.Text = "Nombre";
-            // 
-            // lblTelefono
-            // 
-            lblTelefono.AutoSize = true;
-            lblTelefono.Location = new Point(20, 64);
-            lblTelefono.Name = "lblTelefono";
-            lblTelefono.Size = new Size(58, 15);
-            lblTelefono.TabIndex = 1;
-            lblTelefono.Text = "Teléfonos";
-            lblTelefono.Click += label6_Click;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(80, 30);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(413, 23);
-            textBox2.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(80, 64);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(413, 23);
-            textBox3.TabIndex = 3;
+            button1.Location = new Point(446, 338);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 14;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(533, 355);
+            ClientSize = new Size(533, 373);
+            Controls.Add(button1);
             Controls.Add(gbFormasDePago);
             Controls.Add(gbTipoDeCabania);
             Controls.Add(cbAdicionales);
@@ -280,5 +291,6 @@
         private Label lblTarjetas;
         private RadioButton rbTarjeta;
         private RadioButton rbEfectivo;
+        private Button button1;
     }
 }
